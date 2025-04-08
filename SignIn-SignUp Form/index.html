@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+  </head>
+
+  <body>
+
+    <div id="container" class="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Hesap Oluştur</h1>
+                <div class="social">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <span>Mail ile giriş yapınız</span>
+                <input type="text" placeholder="isim">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Şifre">
+                <button>Kayıt Ol</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Giriş Yap</h1>
+                <div class="social">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <span>Email ve şifre kullan</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Şifre">
+                <a href="#">Şifrenizi mi unuttunuz?</a>
+                <button>Giriş Yap</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Hoşgeldiniz</h1>
+                    <p>Tüm Özelliklerimizden yararlanmak için bilgilerinizi giriniz</p>
+                    <button id="login" class="hidden">Giriş Yap</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Merhaba!</h1>
+                    <p>Kayıt olarak tüm Özelliklerimizden faydalanabilirsin</p>
+                    <button id="register" class="hidden">Kayıt Ol</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const container = document.getElementById("container");
+        const login = document.getElementById("login");
+        const register = document.getElementById("register");
+
+        register.addEventListener("click", () => {
+            container.classList.add("active")
+        });
+
+        login.addEventListener("click", () => {
+            container.classList.remove("active")
+        });
+    </script>
+  </body>
+</html>
